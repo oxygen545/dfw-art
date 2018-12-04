@@ -4,9 +4,6 @@ AdminUser.create!([
 User.create!([
   {username: "Damon Hopkins", email: "damon@hopkins-family.org", password: "password", password_confirmation: "password"}
 ])
-Category.create!([
-  {name: "Wire Wraping", photo_id: 1}
-])
 Photo.create!([
   {page_name: "category", caption: "Wire Wrapping", sequence: 0}
 ])
@@ -15,4 +12,7 @@ Style.create!([
 ])
 Item.create!([
   {title: "Wraps", heading: "Wire Wraps", body: "Item Body", style_id: 1, user_id: 1, photo_id: 1}
+])
+Category.create!([
+  {name: "Wire Wraping", photo_id: 1}
 ])
