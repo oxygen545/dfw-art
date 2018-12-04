@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  resources :styles
   resources :messages
-  resources :visitors
   resources :photos
   resources :items
-  resources :styles
- devise_for :admin_users, ActiveAdmin::Devise.config
+  resources :categories
+  resources :visitors
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  root to: "items#index"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "categories#index"
 end

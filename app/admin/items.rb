@@ -15,7 +15,6 @@ ActiveAdmin.register Item do
 
   filter :item_style_id
   filter :user_id
-  filter :photo_id
 
   form do |f|
     f.inputs do

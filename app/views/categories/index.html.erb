@@ -1,0 +1,26 @@
+<%= raw(get_style Item.find(1)) %>
+<% @style = Style.find(1) %>
+<%= stylesheet_link_tag "carousel" %>
+<% images = Photo.where(page_name: "category") %>
+<% image_count = images.count %>
+</head>
+<body>
+<p id="notice"><%= notice %></p>
+
+<h1>Categories</h1>
+
+    <% @categories.each do |category| %>
+      <div class="row">
+        <div class="col">
+          <h2><%= category.name %></h2>
+          <%= image_tag Photo.find(category.photo_id).image %>
+          <%= link_to 'Show', category %>
+          <%= link_to 'Edit', edit_category_path(category) %>
+          <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>

@@ -58,7 +58,7 @@ h3 {
       </div>
       <div class="row center">
       	<div class="col-sm-4 pf ac m-auto">
-      		<p style="padding-left: 1rem; padding-top: 0rem; text-align: left;">Thank you for your interest in our play. Please use this form to get in contact with us and we will be happy to send you some more information on how you can experience this theatrical production, answer and questions or address any comments you might have. We look forward to hearing from you.</p>
+      		<p style="padding-left: 1rem; padding-top: 0rem; text-align: left;">Thank you for your interest in my art. Please use this form to get in contact with me and I will be happy to send you some more information, answer and questions or address any comments you might have. I look forward to hearing from you.</p>
       	</div>
       	<div class="col-sm-7 m-auto" style="padding-top: 2rem; padding-bottom: 2rem;" >
           <% message = @message %>
@@ -75,8 +75,8 @@ h3 {
             <% end %>          
             <div align="left">
               <% form_bg = "#CAFE" %>
-              <%= form.text_field :first_name , :placeholder => "James" ,:style=>"text-align: right; width: 39%; margin-bottom: .5rem; margin-right: .5rem; background-color: "+form_bg+";"%>
-              <%= form.text_field :last_name , :placeholder => "Polk" ,:style=>"width: 39%; margin-bottom: .5rem; background-color: "+form_bg+";"%><br>
+              <%= form.text_field :first_name , :placeholder => "First Name" ,:style=>"text-align: right; width: 39%; margin-bottom: .5rem; margin-right: .5rem; background-color: "+form_bg+";"%>
+              <%= form.text_field :last_name , :placeholder => "Last Name" ,:style=>"width: 39%; margin-bottom: .5rem; background-color: "+form_bg+";"%><br>
               <%= form.text_field :email, :placeholder => "youraddress@email.com" ,:style=>"text-align: center; width: 80%; margin-bottom: .5rem; background-color: "+form_bg+";"%><br>
               <%= form.text_field :subject , :placeholder => "Subject" ,:style=>"text-align: center; width: 80%; margin-bottom: .5rem; background-color: "+form_bg+";"%><br>
               <%= form.text_area :body , :style => "rows: 8;", :placeholder => "What can I do for you?",:style=>"text-align: center; width: 80%; background-color: "+form_bg+";"%><br>

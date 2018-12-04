@@ -1,0 +1,40 @@
+<%= form_with(model: category, local: true) do |form| %>
+  <% if category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+      <% category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photo_id %>
+  <select name="category[photo_id]" id="category_photo_id">
+  <% Photo.find_each do |photo| %>
+    <% if category.photo_id == photo.id %>
+      <option value="<%= photo.id %>" selected="selected"><%= photo.caption %></option>
+    <% else %>
+        <option value="<%= photo.id %>" ><%= photo.caption %></option>
+    <% end %>
+  <% end %>
+  </select>
+  <%= link_to "New Photo", new_photo_path, :class => "btn btn-sm btn-outline-info" %>
+  <% if category.photo_id != nil %>
+  <%= link_to "Edit Photo", edit_photo_path(category.photo_id), :class => "btn btn-sm btn-outline-warning" %>
+  <% end %>
+   </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

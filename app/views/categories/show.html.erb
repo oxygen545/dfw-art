@@ -1,0 +1,15 @@
+<%= raw(get_style Item.find(1)) %>
+<% @style = Style.find(1) %>
+<%= stylesheet_link_tag "carousel" %>
+<% images = Photo.where(page_name: "carousel") %>
+<% image_count = images.count %>
+</head>
+<body>
+	<p id="notice"><%= notice %></p>
+	<p>
+  		<%= @category.name %>
+	</p>
+	<p><%= image_tag Photo.find(@category.photo_id).image %></p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
