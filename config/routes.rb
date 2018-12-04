@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
-  resources :items
-  resources :styles
+  resources :messages
   resources :visitors
   resources :photos
   root to: "visitors#index"
   devise_for :users
   resources :users
-  
-  get "/example" => "users#example"
-  get "/features" => "visitors#features"
+  resources :items
+  resources :styles
+  get "/example" => "visitors#example"  
+  get "/carousel" => "visitors#carousel"  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

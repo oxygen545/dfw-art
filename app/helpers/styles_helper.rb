@@ -1,7 +1,8 @@
 module StylesHelper
 	def get_style item
 		style = Style.find(item.style_id)
-    	@mystyle = "<style type='text/css'> .pf { font-family: " + style.primary_font + "; } "
+    	@mystyle = "<style type='text/css'>"
+    		@mystyle = @mystyle + ".pf { font-family: " + style.primary_font + "; } "
 			@mystyle = @mystyle + ".sf { font-family: " + style.secondary_font + "; } "
 			@mystyle = @mystyle + ".af { font-family: " + style.alt_font + "; }"
 			@mystyle = @mystyle + ".pc { color: " + style.primary_color + "; }"
@@ -37,9 +38,9 @@ module StylesHelper
   				@mystyle = @mystyle + "background-size: 100% x 100%;}"
     		end
       		@mystyle = @mystyle + "</style>"
-      		@mystyle = @mystyle + "<link href=https://fonts.googleapis.com/css?family=" + "style.primary_font" +" rel='stylesheet'>"
-      		@mystyle = @mystyle + "<link href=https://fonts.googleapis.com/css?family=" + "style.secondary_font" +" rel='stylesheet'>"
-      		@mystyle = @mystyle + "<link href=https://fonts.googleapis.com/css?family=" + "style.alt_font" +" rel='stylesheet'>"
+#      		@mystyle = @mystyle + "<link href='https://fonts.googleapis.com/css?family=" + style.primary_font + "' rel='stylesheet'>"
+ #     		@mystyle = @mystyle + "<link href='https://fonts.googleapis.com/css?family=" + style.secondary_font + "' rel='stylesheet'>"
+  #    		@mystyle = @mystyle + "<link href='https://fonts.googleapis.com/css?family=" + style.alt_font + "' rel='stylesheet'>"
 
       		get_style = @mystyle
     end
@@ -82,7 +83,7 @@ module StylesHelper
   				@mystyle = @mystyle + "background-size: 100% x 100%;}"
     		end
       		@mystyle = @mystyle + "</style>"
-      		get_style = @mystyle
+      		nget_style = @mystyle
     end
 
 end

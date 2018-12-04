@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+<% if @photo != nil %>
+<%  photo = @photo %>
+<% end %>
   <div class="field">
     <%= form.label :page_name %>
     <%= form.text_field :page_name %>
@@ -18,7 +20,7 @@
 
   <div class="field">
     <%= form.label :caption %>
-    <%= form.text_field :caption %>
+    <%= form.text_area :caption, :size => "60x15" %>
   </div>
 
   <div class="field">

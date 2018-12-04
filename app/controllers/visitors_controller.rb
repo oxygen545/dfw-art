@@ -1,14 +1,20 @@
 class VisitorsController < ApplicationController
-	def features
-		@user = current_user
-	end
 
-	def show
-		@user = current_user;
+def show
+	if params[:id] == "contact"
+		render "contact"
 	end
-
-	def index
-		@user = current_user;
+	if params[:id] == "didyou"
+		render "didyou"
+	end
+	if params[:id] == "slavery"
+		render "slavery"
+	end
+	if params[:id] == "carousel"
+		render "carousel"
 	end
 
 end
+
+end
+
