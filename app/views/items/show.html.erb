@@ -55,20 +55,11 @@ h2 {
       <div class="row">
         <div class="col-sm-12" style="padding-top: 1rem; padding-bottom: 1rem;">
           <a href="<%= @page_link %>" style="float: left; padding-left: 7.5rem;">
-            <%= image_tag pagephotos[0], :style => "width: 15rem;"%>
-          </a>
-          <a href="<%= @page_link %>" style="float: right; padding-right: 7.5rem;">
-            <%= image_tag pagephotos[1] , :style =>"width: 10rem;"%>
+            <%= image_tag pagephotos[0], :style => "width: 10vw;"%>
           </a>
         </div>
       </div>
-      <div class="row center"><div class="col-sm-12 pf pc"><h2><%= link_to "\"Who is", @page_link %></h2></div></div>
-      <div class="row text-center"><div class="col-sm-12 pf pc"><h1><%= link_to raw("James K.<br>Polk?\""), @page_link %>  </h1></div></div>
-      <div class="row text-center"><div class="col-sm-12 pf pc" style="padding-top: 2rem;"><%= link_to raw("<h4>A New Play By<br>Kevin Alcock</h4>"), @page_link %></div></div>
-      <div class="row mx-auto" style="width:75%;">
-        <div class="col pf pc" style="text-align: left; padding-top: 3.25rem;"><%= link_to raw("<h4>Directed By<br>Anne Connolly</h4>"), @page_link %></div>
-        <div class="col pf pc" style="text-align: right; padding-top: 3.25rem;"><%= link_to raw("<h4>With Neal Mayer<br>as James K. Polk</h4>"),@page_link  %></div>
-      </div>
+      <div class="row center"><div class="col-sm-12 pf pc"><h2></h2></div></div>
     <% copyrt = "&copy;" %>
     <div class="row fixed-bottom navbar" style="width: 100%; padding-top: 1rem; padding-bottom: 0;">
      <div class="nav-link"><%= link_to raw(copyrt) +"2018 " + ENV['SITE_TITLE'], "https://adhoc.herokuapp.com"%></div>

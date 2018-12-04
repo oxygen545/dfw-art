@@ -3,15 +3,16 @@ class UsersController < InheritedResources::Base
 	def index
 		@eight_chan_banner_url = "https://sys.8ch.net/banners.php?b="
 		@eight_chan_url="https://8ch.net/"
-
 	end
 
-  def example
-  end
+ # def show
+ #     if params[:id] == "sign_in"
 
-  def show
-      @user = User.find(params[:id])
-  end
+#        render "users/sessions/new"
+#      else
+#         @user = User.find(params[:id])
+#    end
+#  end
 
   def delete
     if user_signed_in? 
