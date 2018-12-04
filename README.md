@@ -1,4 +1,4 @@
-Website for a play for a friend
+Website for my artistic friends
 
 ActiveStorage Heroku Information:
 
