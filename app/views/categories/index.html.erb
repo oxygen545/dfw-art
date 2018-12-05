@@ -1,7 +1,6 @@
-<%= raw(get_style Item.find(1)) %>
-<% @style = Style.find(1) %>
-<%= stylesheet_link_tag "carousel" %>
-<% images = Photo.where(page_name: "category") %>
+<%= raw(get_style Item.take) %>
+<% @style = Style.take %>
+<% images = Photo.all %>
 <% image_count = images.count %>
 </head>
 <body>
