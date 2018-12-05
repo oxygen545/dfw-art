@@ -1,20 +1,5 @@
-<% i=0 %>
 <% @style = Style.find(@item.style_id) %>
 <% @page_link = item_path(@item) %>
-<% @photos = Photo.where(page_name: "index") %>
-<% pagephotos = Array.new(@photos.count) %>
-<% @photos.each do |p| %>
-  <% pagephotos[i] = p.image %>
-  <% i+=1 %>
-<% end %>
-
-<% horses = Photo.where(page_name: "item") %>
-<% horse_pics = Array.new(horses.count) %>
-<% i=0 %>
-<% horses.each do |horse| %>
-<%  horse_pics[i] = horse.image %>
-<% i += 1 %>
-<% end %>
 <%= raw(get_style @item) %>
 
 <style>
@@ -54,15 +39,14 @@ h2 {
     <p id="notice" class="notice"><%= notice %></p>
       <div class="row">
         <div class="col-sm-12" style="padding-top: 1rem; padding-bottom: 1rem;">
-          <a href="<%= @page_link %>" style="float: left; padding-left: 7.5rem;">
-            <%= image_tag pagephotos[0], :style => "width: 10vw;"%>
+          <a href="<%= @page_link %>" style="float: left; padding-left: 7.5rem; style: width: 10vw;">
           </a>
         </div>
       </div>
-      <div class="row center"><div class="col-sm-12 pf pc"><h2></h2></div></div>
+      <div class="row center"><div class="col-sm-12 pf pc"><h2>@item.title</h2></div></div>
     <% copyrt = "&copy;" %>
     <div class="row fixed-bottom navbar" style="width: 100%; padding-top: 1rem; padding-bottom: 0;">
-     <div class="nav-link"><%= link_to raw(copyrt) +"2018 " + ENV['SITE_TITLE'], "https://adhoc.herokuapp.com"%></div>
+     <div class="nav-link"><%= link_to raw(copyrt) +"2018 " + ENV['SITE_TITLE'], "https://dfw-art.herokuapp.com"%></div>
     </div>
 
 
